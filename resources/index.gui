@@ -1,3 +1,35 @@
-<svg class="background">
+<!-- <svg class="background">
   <text id="myLabel" />
+</svg> -->
+<svg id="container">
+  <rect id="background" width="100%" height="100%" />
+
+  <g id="clock">
+    <g id="text">
+      <g id="date-container" transform="translate(-140,4)"><text id="date" text-length="32" x="0" y="0" /></g>
+    </g>
+
+    <g id="marks">
+      <g id="m1"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m2"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m3"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m4"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m5"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <!-- <g id="m6"><line x1="130" y1="0" x2="140" y2="0" /></g> -->
+      <g id="m7"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m8"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m9"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m10"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m11"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m12"><line x1="130" y1="0" x2="140" y2="0" /></g>
+    </g>
+
+    <g id="hands">
+      <g id="hour-hand"><line x1="0" y1="0" x2="70" y2="0" /></g>
+      <g id="minute-hand"><line x1="0" y1="0" x2="100" y2="0" /></g>
+      <g id="second-hand"><line x1="0" y1="0" x2="120" y2="0" /></g>
+      <circle id="pin-outer" r="6" />
+      <circle id="pin-inner" r="4" />
+    </g>
+  </g>
 </svg>
