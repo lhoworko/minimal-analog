@@ -6,7 +6,11 @@
 
   <g id="clock">
     <g id="text">
-      <g id="date-container" transform="translate(-140,4)"><text id="date" text-length="32" x="0" y="0" /></g>
+      <g id="date-container"><text id="date" text-length="32" x="0" y="0" /></g>
+      <g id="steps-container">
+        <image href="steps.png" width="15" height="15" x="5" y="-13" />
+        <text id="steps" text-length="32" text-anchor="end" x="0" y="0" />
+      </g>
     </g>
 
     <g id="marks">
@@ -21,7 +25,7 @@
       <g id="m9"><line x1="130" y1="0" x2="140" y2="0" /></g>
       <g id="m10"><line x1="130" y1="0" x2="140" y2="0" /></g>
       <g id="m11"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m12"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <!-- <g id="m12"><line x1="130" y1="0" x2="140" y2="0" /></g> -->
     </g>
 
     <g id="hands">

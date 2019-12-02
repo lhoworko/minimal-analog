@@ -3,7 +3,8 @@ function formattedDate(currentTime) {
 }
 
 function zeroPad(i) {
-  return i < 10 ? "0" + i : i;
+  let s = i.toString();
+  return s.length < 2 ? "0" + i : i;
 }
 
 function dayOfWeekText(d) {

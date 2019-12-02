@@ -1,18 +1,32 @@
+#background {
+  fill: #111111
+}
 #clock {
   transform: translate(150,150);
 }
 g#text {
+  fill: #dedede;
   opacity: 0.75;
   font-size: 15;
 }
 #date-container {
-  transform: translate(-127,4);
+  transform: translate(-140,4);
+}
+#steps-container {
+  transform: translate(118,4);
+}
+#steps-container image {
+  fill: #dedede;
+  opacity: 1;
 }
 #hands {
   transform: rotate(-90);
+  fill: #dedede;
 }
 
-
+#marks {
+  fill: #dedede;
+}
 .mark {
   stroke-width: 2;
 }
@@ -65,8 +79,6 @@ g#text {
   stroke-width: 4;
 }
 
-
-
 #second-hand line {
   stroke-width: 2;
 }
@@ -76,6 +88,11 @@ g#text {
 #hour-hand line {
   stroke-width: 7;
 }
-#pin-inner, #pin-outer {
+#pin-inner {
+  fill:#111111;
+  stroke-width: 2;
+}
+#pin-outer {
+  fill: #dedede;
   stroke-width: 2;
 }
