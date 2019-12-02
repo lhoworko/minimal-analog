@@ -8,7 +8,7 @@
     <g id="text">
       <g id="date-container"><text id="date" text-length="32" x="0" y="0" /></g>
       <g id="steps-container">
-        <image href="steps.png" width="15" height="15" x="5" y="-13" />
+        <image href="steps.png" width="20" height="20" x="5" y="-17" />
         <text id="steps" text-length="32" text-anchor="end" x="0" y="0" />
       </g>
     </g>

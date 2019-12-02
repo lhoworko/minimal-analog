@@ -25,7 +25,7 @@ function secondsToAngle(seconds) {
 
 function getHexColor(number) {
   // # 255 0 0 -> 255 255 0 -> 0 255 0 -> 0 255 255 -> 0 0 255 -> 255 0 255 -> 255 0 0
-  let inRange = number % (255 * 6) / 6;
+  let inRange = Math.floor(number % (255 * 6) / 255);
 
   switch (inRange) {
     case 0: return "#ff" + util.zeroPad((number % 255).toString(16)) + "00";
@@ -39,16 +39,16 @@ function getHexColor(number) {
 
 function updateClock(evt) {
   let hours = evt.date.getHours();
-  let minutes = evt.date.getMinutes();
+  let minutes = evt.date.getMinutes()
   let seconds = evt.date.getSeconds();
 
   document.getElementById("hour-hand").groupTransform.rotate.angle = hoursToAngle(hours, minutes);
   document.getElementById("minute-hand").groupTransform.rotate.angle = minutesToAngle(minutes, seconds);
   document.getElementById("second-hand").groupTransform.rotate.angle = secondsToAngle(seconds);
 
-  document.getElementById("date").textContent = util.formattedDate(evt.date);
-  document.getElementById("steps").textContent = today.local.steps;
   let unix = parseInt(evt.date.getTime() / 1000).toFixed(0);
+  document.getElementById("date").textContent = util.formattedDate(evt.date);
+  document.getElementById("steps").textContent = today.adjusted.steps;
   document.getElementById("hour-hand-line").style.fill = getHexColor(unix);
 }
 

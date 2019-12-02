@@ -7,13 +7,13 @@
 g#text {
   fill: #dedede;
   opacity: 0.75;
-  font-size: 15;
+  font-size: 20;
 }
 #date-container {
-  transform: translate(-140,4);
+  transform: translate(-140,6);
 }
 #steps-container {
-  transform: translate(118,4);
+  transform: translate(118,6);
 }
 #steps-container image {
   fill: #dedede;
