@@ -5,27 +5,22 @@
   <rect id="background" width="100%" height="100%" />
 
   <g id="clock">
-    <g id="text">
-      <g id="date-container"><text id="date" text-length="32" x="0" y="0" /></g>
-      <g id="steps-container">
+    <g id="marks">
+      <g id="m1" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m2" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m3" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m4" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m5" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m6" class="major">
         <image href="steps.png" width="20" height="20" x="5" y="-17" />
         <text id="steps" text-length="32" text-anchor="end" x="0" y="0" />
       </g>
-    </g>
-
-    <g id="marks">
-      <g id="m1"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m2"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m3"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m4"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m5"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <!-- <g id="m6"><line x1="130" y1="0" x2="140" y2="0" /></g> -->
-      <g id="m7"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m8"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m9"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m10"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <g id="m11"><line x1="130" y1="0" x2="140" y2="0" /></g>
-      <!-- <g id="m12"><line x1="130" y1="0" x2="140" y2="0" /></g> -->
+      <g id="m7" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m8" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m9" class="major"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m10" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m11" class="minor"><line x1="130" y1="0" x2="140" y2="0" /></g>
+      <g id="m12" class="major"><text id="date" text-length="32" x="0" y="0" /></g>
     </g>
 
     <g id="hands">

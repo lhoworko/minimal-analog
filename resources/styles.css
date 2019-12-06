@@ -4,32 +4,26 @@
 #clock {
   transform: translate(150,150);
 }
-g#text {
-  fill: #dedede;
-  opacity: 0.75;
-  font-size: 20;
-}
-#date-container {
-  transform: translate(-140,6);
-}
-#steps-container {
-  transform: translate(118,6);
-}
-#steps-container image {
-  fill: #dedede;
-  opacity: 1;
-}
 #hands {
   transform: rotate(-90);
   fill: #dedede;
 }
 
-#marks {
+#marks .major {
   fill: #dedede;
+  stroke-width: 4;
+  opacity: 0.75;
+  font-size: 20;
 }
-.mark {
+#marks .major image {
+  fill: #dedede;
+  opacity: 1;
+}
+#marks .minor {
+  fill: #dedede;
   stroke-width: 2;
 }
+
 #m1 {
   transform: rotate(30);
 }
@@ -39,9 +33,6 @@ g#text {
 #m3 {
   transform: rotate(90);
 }
-#m3 line {
-  stroke-width: 4;
-}
 #m4 {
   transform: rotate(120);
 }
@@ -49,10 +40,7 @@ g#text {
   transform: rotate(150);
 }
 #m6 {
-  transform: rotate(180);
-}
-#m6 line {
-  stroke-width: 4;
+  transform: translate(118,6);
 }
 #m7 {
   transform: rotate(210);
@@ -63,9 +51,6 @@ g#text {
 #m9 {
   transform: rotate(270);
 }
-#m9 line {
-  stroke-width: 4;
-}
 #m10 {
   transform: rotate(300);
 }
@@ -73,10 +58,7 @@ g#text {
   transform: rotate(330);
 }
 #m12 {
-  transform: rotate(360);
-}
-#m12 line {
-  stroke-width: 4;
+  transform: translate(-140,6);
 }
 
 #second-hand line {
