@@ -1,5 +1,5 @@
 #background {
-  fill: #111111
+  fill: #080808
 }
 #clock {
   transform: translate(150,150);
@@ -9,13 +9,13 @@
   fill: #535353;
 }
 #marks line {
-  fill: #DEDEDE;
+  fill: #BABABA;
   stroke-width: 6;
 }
 #marks .text-group {
-  fill: #DEDEDE;
+  fill: #BABABA;
   opacity: 0.75;
-  font-size: 20;
+  font-size: 16;
 }
 #marks .text-group text {
   text-length: 32;
@@ -23,7 +23,7 @@
 
 #hands {
   transform: rotate(-90);
-  fill: #DEDEDE;
+  fill: #BABABA;
 }
 #second line {
   stroke-width: 4;

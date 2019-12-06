@@ -1,5 +1,5 @@
 function formattedDate(currentTime) {
-  return dayOfWeekText(currentTime.getDay()) + " " + zeroPad(currentTime.getDate());
+  return dayOfWeekText(currentTime.getDay()).toUpperCase() + " " + zeroPad(currentTime.getDate());
 }
 
 function zeroPad(i) {
@@ -8,7 +8,7 @@ function zeroPad(i) {
 }
 
 function dayOfWeekText(d) {
-  return ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"][d];
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][d];
 }
 
 export { formattedDate, zeroPad, dayOfWeekText };
