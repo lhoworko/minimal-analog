@@ -10,10 +10,6 @@ var activities = [
   {"image": "icons/dist.png", "method": getDistance },
   {"image": "icons/active.png", "method": getActiveMins },
 ];
-if (HeartRateSensor) {
-  const heartRateMonitor = new HeartRateSensor();
-  activities.push({"image": "icons/heart.png", "method": getHeartRate });
-}
 
 clock.granularity = "seconds";
 
@@ -35,10 +31,6 @@ function setActivity(index) {
 
 function getSteps() {
   return today.adjusted.steps;
-}
-
-function getHeartRate() {
-  return heartRateMonitor.heartRate;
 }
 
 function getCalories() {
