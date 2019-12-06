@@ -1,14 +1,54 @@
 import clock from "clock";
 import document from "document";
-// import { preferences } from "user-settings";
 import * as util from "../common/utils";
 import { today } from "user-activity"
+import { HeartRateSensor } from "heart-rate";
+
+const ACTIVITIES = [
+  {"image": "icons/steps.png", "method": getSteps },
+  {"image": "icons/heart.png", "method": getHeartRate },
+  {"image": "icons/cals.png", "method": getCalories },
+  {"image": "icons/dist.png", "method": getDistance },
+  {"image": "icons/active.png", "method": getActiveMins },
+];
+const heartRateMonitor = new HeartRateSensor();
 
 clock.granularity = "seconds";
 
-let hideSecondHand = false;
-if (hideSecondHand) {
-  document.getElementById("second").style.display = "none";
+let activityIndex = 0;
+let activityMethod = null;
+setActivity(0);
+
+let activityGroup = document.getElementById("activity-group");
+activityGroup.onclick = function(e) {
+  activityIndex = (activityIndex + 1) % ACTIVITIES.length;
+  setActivity(activityIndex);
+}
+
+function setActivity(index) {
+  document.getElementById("activity-image").href = ACTIVITIES[index]["image"];
+  activityMethod = ACTIVITIES[index]["method"];
+  document.getElementById("activity-value").textContent = activityMethod();
+}
+
+function getSteps() {
+  return today.adjusted.steps;
+}
+
+function getHeartRate() {
+  return heartRateMonitor.heartRate;
+}
+
+function getCalories() {
+  return today.adjusted.calories;
+}
+
+function getDistance() {
+  return today.adjusted.distance;
+}
+
+function getActiveMins() {
+  return today.adjusted.activeMinutes;
 }
 
 function hoursToAngle(hours, minutes) {
@@ -48,7 +88,7 @@ function updateClock(evt) {
 
   let unix = parseInt(evt.date.getTime() / 1000).toFixed(0);
   document.getElementById("date").textContent = util.formattedDate(evt.date);
-  document.getElementById("steps").textContent = today.adjusted.steps;
+  document.getElementById("activity-value").textContent = activityMethod();
 
   let coloredElems = document.getElementsByClassName("colored");
   let color = getHexColor(unix);
