@@ -26,11 +26,11 @@
   fill: #DEDEDE;
 }
 #second line {
-  stroke-width: 2;
+  stroke-width: 4;
 }
 #minute line {
   stroke-width: 4;
 }
 #hour line {
-  stroke-width: 7;
+  stroke-width: 8;
 }

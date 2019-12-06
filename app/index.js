@@ -49,7 +49,12 @@ function updateClock(evt) {
   let unix = parseInt(evt.date.getTime() / 1000).toFixed(0);
   document.getElementById("date").textContent = util.formattedDate(evt.date);
   document.getElementById("steps").textContent = today.adjusted.steps;
-  document.getElementById("hour").style.fill = getHexColor(unix);
+
+  let coloredElems = document.getElementsByClassName("colored");
+  let color = getHexColor(unix);
+  coloredElems.forEach(function(elem) {
+    elem.style.fill = color;
+  });
 }
 
 clock.ontick = (evt) => updateClock(evt);
