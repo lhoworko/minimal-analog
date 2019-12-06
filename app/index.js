@@ -2,7 +2,6 @@ import clock from "clock";
 import document from "document";
 import * as util from "../common/utils";
 import { today } from "user-activity"
-import { HeartRateSensor } from "heart-rate";
 
 var activities = [
   {"image": "icons/steps.png", "method": getSteps },
@@ -17,8 +16,8 @@ let activityIndex = 0;
 let activityMethod = null;
 setActivity(0);
 
-let activityGroup = document.getElementById("activity-group");
-activityGroup.onclick = function(e) {
+let container = document.getElementById("container");
+container.onclick = function(e) {
   activityIndex = (activityIndex + 1) % activities.length;
   setActivity(activityIndex);
 }
