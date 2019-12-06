@@ -11,11 +11,12 @@
 #marks line {
   fill: #BABABA;
   stroke-width: 6;
+  stroke-linecap: round;
 }
 #marks .text-group {
   fill: #BABABA;
   opacity: 0.75;
-  font-size: 16;
+  font-size: 20;
 }
 #marks .text-group text {
   text-length: 32;
@@ -24,6 +25,9 @@
 #hands {
   transform: rotate(-90);
   fill: #BABABA;
+}
+#hands line {
+  stroke-linecap: round;
 }
 #second line {
   stroke-width: 4;
