@@ -4,77 +4,33 @@
 #clock {
   transform: translate(150,150);
 }
-#hands {
-  transform: rotate(-90);
-  fill: #dedede;
-}
 
-#marks .major {
-  fill: #dedede;
-  stroke-width: 4;
+#marks circle {
+  fill: #535353;
+}
+#marks line {
+  fill: #DEDEDE;
+  stroke-width: 6;
+}
+#marks .text-group {
+  fill: #DEDEDE;
   opacity: 0.75;
   font-size: 20;
 }
-#marks .major image {
-  fill: #dedede;
-  opacity: 1;
-}
-#marks .minor {
-  fill: #dedede;
-  stroke-width: 2;
+#marks .text-group text {
+  text-length: 32;
 }
 
-#m1 {
-  transform: rotate(30);
+#hands {
+  transform: rotate(-90);
+  fill: #DEDEDE;
 }
-#m2 {
-  transform: rotate(60);
-}
-#m3 {
-  transform: rotate(90);
-}
-#m4 {
-  transform: rotate(120);
-}
-#m5 {
-  transform: rotate(150);
-}
-#m6 {
-  transform: translate(118,6);
-}
-#m7 {
-  transform: rotate(210);
-}
-#m8 {
-  transform: rotate(240);
-}
-#m9 {
-  transform: rotate(270);
-}
-#m10 {
-  transform: rotate(300);
-}
-#m11 {
-  transform: rotate(330);
-}
-#m12 {
-  transform: translate(-140,6);
-}
-
-#second-hand line {
+#second line {
   stroke-width: 2;
 }
-#minute-hand line {
+#minute line {
   stroke-width: 4;
 }
-#hour-hand line {
+#hour line {
   stroke-width: 7;
-}
-#pin-inner {
-  fill:#111111;
-  stroke-width: 2;
-}
-#pin-outer {
-  fill: #dedede;
-  stroke-width: 2;
 }

@@ -8,7 +8,7 @@ clock.granularity = "seconds";
 
 let hideSecondHand = false;
 if (hideSecondHand) {
-  document.getElementById("second-hand").style.display = "none";
+  document.getElementById("second").style.display = "none";
 }
 
 function hoursToAngle(hours, minutes) {
@@ -42,14 +42,14 @@ function updateClock(evt) {
   let minutes = evt.date.getMinutes()
   let seconds = evt.date.getSeconds();
 
-  document.getElementById("hour-hand").groupTransform.rotate.angle = hoursToAngle(hours, minutes);
-  document.getElementById("minute-hand").groupTransform.rotate.angle = minutesToAngle(minutes, seconds);
-  document.getElementById("second-hand").groupTransform.rotate.angle = secondsToAngle(seconds);
+  document.getElementById("hour").groupTransform.rotate.angle = hoursToAngle(hours, minutes);
+  document.getElementById("minute").groupTransform.rotate.angle = minutesToAngle(minutes, seconds);
+  document.getElementById("second").groupTransform.rotate.angle = secondsToAngle(seconds);
 
   let unix = parseInt(evt.date.getTime() / 1000).toFixed(0);
   document.getElementById("date").textContent = util.formattedDate(evt.date);
   document.getElementById("steps").textContent = today.adjusted.steps;
-  document.getElementById("hour-hand-line").style.fill = getHexColor(unix);
+  document.getElementById("hour").style.fill = getHexColor(unix);
 }
 
 clock.ontick = (evt) => updateClock(evt);
