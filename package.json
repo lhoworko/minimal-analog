@@ -1,6 +1,6 @@
 {
   "name": "minimal-analog",
-  "version": "0.1.8",
+  "version": "0.19",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
@@ -14,8 +14,7 @@
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
-      "access_activity",
-      "access_heart_rate"
+      "access_activity"
     ],
     "buildTargets": [
       "meson",
