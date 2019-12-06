@@ -4,14 +4,16 @@ import * as util from "../common/utils";
 import { today } from "user-activity"
 import { HeartRateSensor } from "heart-rate";
 
-const ACTIVITIES = [
+var activities = [
   {"image": "icons/steps.png", "method": getSteps },
-  {"image": "icons/heart.png", "method": getHeartRate },
   {"image": "icons/cals.png", "method": getCalories },
   {"image": "icons/dist.png", "method": getDistance },
   {"image": "icons/active.png", "method": getActiveMins },
 ];
-const heartRateMonitor = new HeartRateSensor();
+if (HeartRateSensor) {
+  const heartRateMonitor = new HeartRateSensor();
+  activities.push({"image": "icons/heart.png", "method": getHeartRate });
+}
 
 clock.granularity = "seconds";
 
@@ -21,13 +23,13 @@ setActivity(0);
 
 let activityGroup = document.getElementById("activity-group");
 activityGroup.onclick = function(e) {
-  activityIndex = (activityIndex + 1) % ACTIVITIES.length;
+  activityIndex = (activityIndex + 1) % activities.length;
   setActivity(activityIndex);
 }
 
 function setActivity(index) {
-  document.getElementById("activity-image").href = ACTIVITIES[index]["image"];
-  activityMethod = ACTIVITIES[index]["method"];
+  document.getElementById("activity-image").href = activities[index]["image"];
+  activityMethod = activities[index]["method"];
   document.getElementById("activity-value").textContent = activityMethod();
 }
 
